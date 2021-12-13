@@ -65,6 +65,7 @@ fn step(from: &[Data], to: &mut [Data]) -> usize {
     result
 }
 
+/*
 fn print_map(step: u32, map: &[Data]) {
     println!("After step {}", step);
     for y in 0..HEIGHT {
@@ -75,6 +76,7 @@ fn print_map(step: u32, map: &[Data]) {
     }
     println!();
 }
+*/
 
 #[aoc(day11, part1)]
 pub fn solve_part1(data: &[Data]) -> Value {
@@ -87,7 +89,7 @@ pub fn solve_part1(data: &[Data]) -> Value {
         sum += step(&map2, &mut map1);
         // print_map(2 + _step * 2, &map1);
     }
-    print_map(100, &map1);
+    // print_map(100, &map1);
     sum
 }
 
@@ -98,12 +100,12 @@ pub fn solve_part2(data: &[Data]) -> Value {
     for current in 0.. {
         step(&map1, &mut map2);
         if map2.iter().all(|octo| *octo == 0) {
-            print_map(1 + current * 2, &map2);
+            // print_map(1 + current * 2, &map2);
             return current as usize * 2 + 1;
         }
         step(&map2, &mut map1);
         if map1.iter().all(|octo| *octo == 0) {
-            print_map(2 + current * 2, &map1);
+            // print_map(2 + current * 2, &map1);
             return current as usize * 2 + 2;
         }
     }

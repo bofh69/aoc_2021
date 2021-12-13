@@ -33,7 +33,6 @@ pub fn solve_part1(data: &[Data]) -> Value {
     let mut map = std::collections::HashMap::new();
 
     for line in data {
-        dbg!(&line);
         if line.0 .0 == line.1 .0 {
             let min_y = std::cmp::min(line.0 .1, line.1 .1);
             let max_y = std::cmp::max(line.0 .1, line.1 .1);
@@ -74,7 +73,6 @@ pub fn solve_part2(data: &[Data]) -> Value {
     let mut map = std::collections::HashMap::new();
 
     for line in data {
-        dbg!(&line);
         let (mut x, mut y) = line.0;
         loop {
             if let Some(n) = map.get_mut(&(x, y)) {

@@ -13,7 +13,7 @@ pub fn input_generator(input: &str) -> Vec<Data> {
 pub fn solve_part1(data: &[Data]) -> Value {
     let min = data.iter().min().unwrap();
     let max = data.iter().max().unwrap();
-    dbg!(min, max);
+    // dbg!(min, max);
     let mut result = vec![];
 
     for i in *min..=*max {
@@ -27,7 +27,7 @@ pub fn solve_part1(data: &[Data]) -> Value {
 pub fn solve_part2(data: &[Data]) -> Value {
     let min = data.iter().min().unwrap();
     let max = data.iter().max().unwrap();
-    dbg!(min, max);
+    // dbg!(min, max);
     let mut result = vec![];
 
     for i in *min..=*max {
